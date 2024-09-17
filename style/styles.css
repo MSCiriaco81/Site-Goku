@@ -16,10 +16,21 @@ header {
 }
 
 /* Nome da Loja */
+@font-face {
+    font-family: 'goku'; 
+    src: url(/fontes/Dragon\ Ball.ttf);
+}    
 header h1 {
     font-family: 'goku', sans-serif; /* Fonte Goku */
-    color: #ff0000; 
+    color: #ff3300; 
     margin: 0;
+    font-style: 'goku';
+}
+
+
+
+h1{
+    font-family:'goku', sans-serif;
 }
 
 /* Botões */
@@ -60,17 +71,6 @@ footer {
     color: #ffffff; /* Texto branco */
     padding: 10px;
     text-align: center;
-}
-
-/* Fontes personalizadas */
-.matemasie-regular {
-    font-family: "Matemasie", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-h1 {
-    font-family: "Matemasie", sans-serif;
 }
 
 /* Estilo do Carrossel */

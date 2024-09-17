@@ -258,21 +258,21 @@ header {
 }
 
 /* Nome da Loja */
+@font-face {
+    font-family: 'goku'; 
+    src: url(/fontes/Dragon\ Ball.ttf);
+}    
 header h1 {
     font-family: 'goku', sans-serif; /* Fonte Goku */
     color: #ff3300; 
     margin: 0;
+    font-style: 'goku';
 }
 
-/* Fontes personalizadas */
-.matemasie-regular {
-    font-family: "Matemasie", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-h1 {
-    font-family: "Matemasie", sans-serif;
+
+
+h1{
+    font-family:'goku', sans-serif;
 }
 
 /* Rodapé */
