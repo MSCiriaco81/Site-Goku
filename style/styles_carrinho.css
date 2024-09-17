@@ -245,6 +245,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
+    margin-bottom: 50px; /* Ajuste isso de acordo com a altura do rodapé, para evitar sobreposição do conteúdo */
+
 }
 
 /* Cabeçalho */
@@ -272,10 +275,12 @@ h1 {
 }
 /* Rodapé */
 footer {
-    background-color: #3B5998; /* Cor de fundo azul do rodapé */
-    color: #ffffff; /* Texto branco */
-    padding: px;
-    text-align: center;
+    background-color: #3B5998;
+    padding: 10px 0; /* Reduz o espaçamento vertical */
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte para menor */
+    position: fixed; /* Fixa o rodapé no final da página */
+    bottom: 0;
     width: 100%;
-    height: 100px;
+    text-align: center;
+    z-index: 1000; /* Garante que ele esteja sempre visível */
 }

@@ -26,7 +26,7 @@ function Login() {
 
     if (loginSuccessful) {
         alert("Você Logou!");
-        window.location.href = "teste_no_login_index.html"; 
+        window.location.href = "no_login_index.html"; 
     } else {
         alert("Login ou senha inválidos!");
     }
