@@ -138,13 +138,13 @@ aside .button {
 
 /* Estilo do Carrinho */
 #carrinho-lista {
-    display: none; /* Oculto por padrão */
+    display: none;
     position: absolute;
     right: 20px;
     top: 60px; /* Ajuste conforme necessário */
     width: 250px; /* Ajuste conforme necessário */
-    background-color: #d1d1d1; /* Fundo cinza claro */
-    border: 1px solid #585858; /* Borda cinza escuro */
+    background-color: #d1d1d1; 
+    border: 1px solid #585858; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
     z-index: 1000; /* Garante que fique sobre outros elementos */
@@ -182,7 +182,7 @@ aside .button {
 /* Botão de fechar o carrinho */
 #carrinho-lista button {
     width: 100%;
-    background-color: #FF6F00; /* Laranja */
+    background-color: #FF6F00; 
     border: none;
     padding: 8px;
     border-radius: 5px;
@@ -240,8 +240,8 @@ aside .button {
 
 /* Estilo geral do corpo */
 body {
-    background-color: #f0f0f0; /* Fundo cinza claro */
-    color: #333; /* Texto padrão escuro */
+    background-color: #f0f0f0; 
+    color: #333; 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -260,7 +260,7 @@ header {
 /* Nome da Loja */
 header h1 {
     font-family: 'goku', sans-serif; /* Fonte Goku */
-    color: #ff3300; /* Manter texto branco */
+    color: #ff3300; 
     margin: 0;
 }
 
