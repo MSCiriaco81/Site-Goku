@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Dragon Ball</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="bg-warning py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+          <!-- Nome da Loja -->
+          <a href="index.html">  <h1 class="fontgoku">Loja Dragon Ball</h1></a>
+
+          <!-- Seção de Login -->
+          <form class="form-inline" id="loginForm">
+              <input type="text" class="form-control mr-2" id="login" placeholder="Insira Login">
+              <input type="password" class="form-control mr-2" id="password" placeholder="Insira a Senha">
+              <button type="button" id="loginBtn" class="btn btn-info">Logar</button>
+          </form>
+      
+
+            <!-- Botão do Carrinho com contador -->
+            <button class="btn btn-warning position-relative" id="carrinhoBtn">
+                <img src="img/carrinho.png" width="40px" alt="Carrinho">
+                <span id="contador-carrinho" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                    <span class="visually-hidden">itens no carrinho</span>
+                </span>
+            </button>
+
+            <!-- Carrinho de Compras -->
+            <div id="carrinho-lista">
+                <h4>Seu Carrinho</h4>
+                <ul></ul> <!-- Local onde os itens serão exibidos -->
+                <button onclick="esconderCarrinho(); window.location.href='carrinho.html';">Finalizar compra</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrossel -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade custom-carousel" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="img/carrosel.png" alt="Primeiro Slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/carrosel2.png" alt="Segundo Slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/carrosel3.png" alt="Terceiro Slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+
+    <!-- Lista de Produtos -->
+    <div class="container mt-5">
+        <h2 class="text-center">Produtos</h2>
+        
+        <!-- Contêiner para os cards com fundo cinza claro -->
+        <div class="cards-container" style="background-color: #dadada; padding: 20px; border-radius: 10px;">
+            <div class="row justify-content-center">
+                <!-- Produto 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/camisa_goku.jpg" class="card-img-top" alt="Camiseta Goku">
+                        <div class="card-body">
+                            <h5 class="card-title">Camiseta Goku</h5>
+                            <p class="card-text">R$39,99</p>
+                            <button class="btn btn-warning btn-block" onclick="adicionarAoCarrinho('Camiseta Goku')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/figure_vegeta.jpg" class="card-img-top" alt="Action Figure Vegeta">
+                        <div class="card-body">
+                            <h5 class="card-title">Action Figure Vegeta</h5>
+                            <p class="card-text">R$99,99</p>
+                            <button class="btn btn-warning btn-block" onclick="adicionarAoCarrinho('Action Figure Vegeta')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/caneca_goku.jpg" class="card-img-top" alt="Caneca Dragon Ball">
+                        <div class="card-body">
+                            <h5 class="card-title">Caneca Dragon Ball</h5>
+                            <p class="card-text">R$25,00</p>
+                            <button class="btn btn-warning btn-block" onclick="adicionarAoCarrinho('Caneca Dragon Ball')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/chaveiro.jpg" class="card-img-top" alt="Chaveiro Shenlong">
+                        <div class="card-body">
+                            <h5 class="card-title">Chaveiro Shenlong</h5>
+                            <p class="card-text">R$10,00</p>
+                            <button class="btn btn-warning btn-block" onclick="adicionarAoCarrinho('Chaveiro Shenlong')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/mochila.jpg" class="card-img-top" alt="Mochila Kame">
+                        <div class="card-body">
+                            <h5 class="card-title">Mochila Kame</h5>
+                            <p class="card-text">R$69,00</p>
+                            <button class="btn btn-warning btn-block" onclick="adicionarAoCarrinho('Mochila Kame')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/bone.jpg" class="card-img-top" alt="Boné Dragon Ball">
+                        <div class="card-body">
+                            <h5 class="card-title">Boné Dragon Ball</h5>
+                            <p class="card-text">R$130,00</p>
+                            <button class="btn btn-warning btn-block" onclick="adicionarAoCarrinho('Boné Dragon Ball')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 7 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/poster.png" class="card-img-top" alt="Poster Goku vs Freeza">
+                        <div class="card-body">
+                            <h5 class="card-title">Poster Goku vs Freeza</h5>
+                            <p class="card-text">R$20,00</p>
+                            <button class="btn btn-warning btn-block" onclick="adicionarAoCarrinho('Poster Goku vs Freeza')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 8 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/figure_bulma.png" class="card-img-top" alt="Figura Bulma">
+                        <div class="card-body">
+                            <h5 class="card-title">Figura Bulma</h5>
+                            <p class="card-text">R$230,00</p>
+                            <button class="btn btn-warning btn-block" onclick="adicionarAoCarrinho('Figura Bulma')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 9 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/relogio.jpg" class="card-img-top" alt="Relógio Dragon Radar">
+                        <div class="card-body">
+                            <h5 class="card-title">Relógio Dragon Radar</h5>
+                            <p class="card-text">R$120,00</p>
+                            <button class="btn btn-warning btn-block" onclick="adicionarAoCarrinho('Relógio Dragon Radar')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Fecha a div.row -->
+        </div> <!-- Fecha o contêiner dos cards -->
+    </div>
+
+    <!-- Seção Sobre Nós -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="img/goku.jpg" class="img-fluid" alt="Goku">
+            </div>
+            <div class="col-md-8">
+                <h2>Oi, eu sou o Goku!</h2>
+                <p style="text-align: justify;">"Dragon Ball" é uma série de mangá criada por Akira Toriyama em 1984. A história acompanha as aventuras de Goku desde a infância até a vida adulta, enquanto ele treina artes marciais e explora o mundo em busca das sete esferas do dragão. Toriyama era um dos mais influentes mangakás até o momento de sua morte em 1 de março de 2024, e sua obra ainda tem milhões de fãs no mundo todo <a href="sobrenos.html"> ver mais... </a></p>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="text-center py-3 mt-5">
+        <p>&copy; 2024 Loja Dragon Ball. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts do Bootstrap e dependências -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Script principal -->
+    <script src="app.js"></script>
+</body>
+</html>

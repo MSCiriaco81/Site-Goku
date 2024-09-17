@@ -1,0 +1,173 @@
+/* Estilo geral do corpo */
+body {
+    background-color: #f0f0f0; 
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ff7912; 
+    color: #fff;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Nome da Loja */
+header h1 {
+    font-family: 'goku', sans-serif; /* Fonte Goku */
+    color: #ff2222; 
+    margin: 0;
+}
+
+/* Botões */
+.btn-warning {
+    background-color: #FF6F00; 
+    border-color: #FF6F00;
+    color: #ffffff; 
+}
+
+.btn-warning:hover {
+    background-color: #E65100; 
+    border-color: #E65100;
+}
+
+/* Cards de Produtos */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: box-shadow 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+    border: 1px solid #333; 
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+}
+
+.card-title {
+    color: #3B5998; /* Cor do título dos produtos */
+}
+
+.card-body {
+    background-color: #ffffff; 
+    color: #353535; /* Texto dos cards */
+}
+
+/* Rodapé */
+footer {
+    background-color: #3B5998;
+    color: #ffffff; /* Texto branco */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Fontes personalizadas */
+@font-face {
+    font-family: 'goku'; 
+    src: url('/fontes/Dragon\ Ball.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'goku', sans-serif;
+}
+
+/* Estilo do Carrossel */
+.carousel-medium .carousel-item img {
+    width: 100%;
+    height: 400px; /* Altura do carrossel */
+    object-fit: cover;
+}
+
+.custom-carousel {
+    width: 100%; /* Ajusta a largura */
+    margin: 0 auto; /* Centraliza o carrossel */
+}
+
+.custom-carousel .carousel-inner img {
+    height: 400px; /* Altura fixa para as imagens do carrossel */
+    object-fit: cover; /* Garante que as imagens não distorçam */
+}
+
+/* Estilo do Carrinho */
+#carrinho-lista {
+    display: none; /* Oculto por padrão */
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    width: 300px;
+    background-color: #d1d1d1; 
+    border: 1px solid #585858; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000; /* Garante que fique sobre outros elementos */
+    padding: 10px;
+}
+
+#carrinho-lista h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#carrinho-lista ul {
+    list-style-type: none;
+    color: #1b1b1b; /* Cor do texto dos itens dentro do carrinho */
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    
+}
+
+#carrinho-lista li {
+    padding: 8px 0;
+    border-bottom: 1px solid #b1b1b1;
+}
+
+#carrinho-lista li:last-child {
+    border-bottom: none;
+}
+
+#carrinho-lista .carrinho-vazio {
+    text-align: center;
+    color: #bbbbbb;
+}
+
+/* Botão de fechar o carrinho */
+#carrinho-lista button {
+    width: 100%;
+    background-color: #FF6F00;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#carrinho-lista button:hover {
+    background-color: #E65100; /* Laranja mais escuro ao passar o mouse */
+}
+
+/* Contador de itens no carrinho */
+#contador-carrinho {
+    background-color: rgb(209, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position:relative;
+    top: 5px;
+    right: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #carrinho-lista {
+        width: 90%;
+        right: 5%;
+        top: 70px;
+    }
+}
+
