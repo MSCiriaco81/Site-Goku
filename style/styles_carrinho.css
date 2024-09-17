@@ -228,7 +228,15 @@ aside .button {
     line-height: 16px;
     text-align: center;
 }
-
+.form-inline {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
 /* Responsividade */
 @media (max-width: 768px) {
     #carrinho-lista {
@@ -258,17 +266,6 @@ header {
 }
 
 /* Nome da Loja */
-@font-face {
-    font-family: 'goku'; 
-    src: url(/fontes/Dragon_Ball.otf);
-}    
-header h1 {
-    font-family: 'goku', sans-serif; /* Fonte Goku */
-    color: #ff3300; 
-    margin: 0;
-    font-style: 'goku';
-}
-
 
 
 h1{
