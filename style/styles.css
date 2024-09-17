@@ -18,7 +18,7 @@ header {
 /* Nome da Loja */
 @font-face {
     font-family: 'goku'; 
-    src: url(/fontes/Dragon\ Ball.ttf);
+    src: url(/fontes/Dragon_Ball.otf);
 }    
 header h1 {
     font-family: 'goku', sans-serif; /* Fonte Goku */
